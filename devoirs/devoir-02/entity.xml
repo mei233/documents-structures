@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Root SYSTEM "entity.dtd">
+<Root>
+    <Element3>
+        <Element2 id="id3"/>
+    </Element3>
+    <Element4 id = "id1"/>
+    <Element5 id="id2"/>
+</Root>
