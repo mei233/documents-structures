@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="factbook-minimal.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<mondial>
+    <continent id="ID1" name="Asian"/>
+    <continent id="ID2" name="Europe"/>
+    <country id="ID3" name="China" gdp_agri="1361000000000" gdp_total="13610000000000">
+        <name></name>
+        <city latitude="23N" longitude="113E">
+            <name>Canton</name>
+            <population xmlns="inalco:documents-structures:ns">20000000</population>
+        </city>
+    </country>
+</mondial>
