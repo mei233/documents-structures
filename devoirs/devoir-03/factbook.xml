@@ -4,7 +4,7 @@
     <continent id="ID1" name="Asian"/>
     <continent id="ID2" name="Europe"/>
     <country id="ID3" name="China" gdp_agri="1361000000000" gdp_total="13610000000000">
-        <name></name>
+        <name>China</name>
         <city latitude="23N" longitude="113E">
             <name>Canton</name>
             <population xmlns="inalco:documents-structures:ns">20000000</population>
