@@ -536,7 +536,7 @@ Les patrons peuvent être récursif à l'intérieur d'un élément
 Ré-écrire notre grammaire rng des livres en utilisant les patrons nommés
 Correction dans le fichier
 ```xml
-seance_05/exercice-livres-patronsNommes.rng
+03-RelaxNG/exercice-livres-patronsNommes.rng
 ```
 ---
 # RelaxNG - les énumérations
@@ -774,6 +774,23 @@ On appelle `<a:documentation> ... </a:documentation>` pour décrire ce que l'on 
     <attribut name="nom"/>
 </element>
 ```
+
+---
+## Exemple de schéma : la TEI
+
+La TEI se base sur RelaxNG et Schematron pour encadrer son vocabulaire.
+
+`http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_minimal.rng`
+
+Exercice
+- modifier le schéma pour autoriser l'ajout d'un attribut "couverture" sur l'élement `<title>` `/TEI/teiHeader/titleStmt/title`.
+L'attribut a pour type de données un booléen
+- supprimer les attributs globaux de rendus sur la balise `<p>`
+
+---
+## Exercice
+
+A partir du document `factbook-minimal.rng`, générer le document xml associé
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
