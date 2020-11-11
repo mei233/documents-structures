@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pdv_liste>
+  <pdv id="1000001" latitude="4620114" longitude="519791" cp="01000" pop="R">
+    <adresse>ROUTE NATIONALE</adresse>
+    <ville>SAINT-DENIS-LèS-BOURG</ville>
+    <ouverture debut="01:00" fin="01:00" saufjour=""/>
+    <services>
+      <service>Automate CB</service>
+      <service>Vente de gaz domestique</service>
+      <service>Station de gonflage</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2014-09-27 10:01:27" valeur="1255"/>
+    <prix nom="SP95" id="2" maj="2014-09-27 10:01:28" valeur="1455"/>
+    <prix nom="SP98" id="6" maj="2014-09-27 10:01:28" valeur="1515"/>
+    <fermeture/>
+    <rupture/>
+  </pdv>
+  <pdv id="1000002" latitude="4621842" longitude="522767" cp="01000" pop="R">
+    <adresse>16 Avenue de Marboz</adresse>
+    <ville>BOURG-EN-BRESSE</ville>
+    <ouverture debut="08:45" fin="19:30" saufjour="Dimanche"/>
+    <services>
+      <service>Automate CB</service>
+      <service>Vente de gaz domestique</service>
+      <service>Station de gonflage</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2014-09-29 12:27:33" valeur="1255"/>
+    <prix nom="SP95" id="2" maj="2014-09-29 12:27:33" valeur="1455"/>
+    <prix nom="SP98" id="6" maj="2014-09-29 12:27:33" valeur="1505"/>
+    <rupture id="3" nom="E85" début="2009-11-03 12:19:00" fin=""/>
+    <fermeture/>
+  </pdv>
+  <pdv id="1000004" latitude="4618836" longitude="524447" cp="01000" pop="R">
+    <adresse>20 Avenue du Maréchal Juin</adresse>
+    <ville>Bourg-en-Bresse</ville>
+    <ouverture debut="01:00" fin="01:00" saufjour=""/>
+    <services>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Vente de fioul domestique</service>
+      <service>GPL</service>
+      <service>Carburant qualité supérieure</service>
+      <service>Station de gonflage</service>
+      <service>Piste poids lourds</service>
+      <service>Toilettes publiques</service>
+      <service>Relais colis</service>
+      <service>Vente de gaz domestique</service>
+      <service>Location de véhicule</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2014-09-27 20:00:00" valeur="1400"/>
+    <prix nom="SP95" id="2" maj="2014-09-27 20:00:00" valeur="1600"/>
+    <prix nom="GPLc" id="4" maj="2014-06-20 20:02:00" valeur="910"/>
+    <fermeture/>
+    <rupture/>
+  </pdv>
+  <pdv id="1000005" latitude="4620093.59235" longitude="519942.024022" cp="01000" pop="R">
+    <adresse>642 Avenue de Trévoux</adresse>
+    <ville>SAINT-DENIS-LèS-BOURG</ville>
+    <ouverture debut="06:00" fin="22:00" saufjour=""/>
+    <services>
+      <service>Vente de gaz domestique</service>
+      <service>Automate CB</service>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Carburant qualité supérieure</service>
+      <service>Lavage multi-programmes</service>
+      <service>Station de gonflage</service>
+      <service>Piste poids lourds</service>
+      <service>Station de lavage</service>
+    </services>
+    <rupture id="2" nom="SP95" début="2011-06-01 00:00:00" fin=""/>
+    <prix/>
+    <fermeture/>
+  </pdv>
+  <pdv id="1000006" latitude="4620754" longitude="523758" cp="01000" pop="R">
+    <adresse>1 Boulevard John Kennedy</adresse>
+    <ville>BOURG-EN-BRESSE</ville>
+    <ouverture debut="01:00" fin="01:00" saufjour="Dimanche"/>
+    <services>
+      <service>Vente de gaz domestique</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2014-06-13 09:14:25" valeur="1289"/>
+    <prix nom="SP95" id="2" maj="2014-06-13 09:14:25" valeur="1529"/>
+    <prix nom="SP98" id="6" maj="2014-06-13 09:14:25" valeur="1569"/>
+    <fermeture/>
+    <rupture/>
+  </pdv>
+  <pdv id="1000007" latitude="4620105" longitude="524891" cp="01000" pop="R">
+    <adresse>Avenue Amédée Mercier</adresse>
+    <ville>Bourg-en-Bresse</ville>
+    <ouverture debut="01:00" fin="01:00" saufjour="Dimanche"/>
+    <services>
+      <service>Vente de gaz domestique</service>
+      <service>Automate CB</service>
+      <service>Vente de fioul domestique</service>
+      <service>Station de lavage</service>
+      <service>Lavage multi-programmes</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2014-09-26 08:49:07" valeur="1255"/>
+    <prix nom="SP95" id="2" maj="2014-09-26 08:49:08" valeur="1455"/>
+    <prix nom="E10" id="5" maj="2014-09-26 08:49:08" valeur="1435"/>
+    <prix nom="SP98" id="6" maj="2014-09-26 08:49:08" valeur="1505"/>
+    <fermeture/>
+    <rupture/>
+  </pdv>
+</pdv_liste>

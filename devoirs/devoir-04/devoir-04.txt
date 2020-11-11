@@ -1,0 +1,37 @@
+Partie2 À partir du fichier PDV.xml
+1. /pdv_liste
+2. /pdv_liste/pdv/*
+3. //ville/text()
+4. //pdv[46]
+5. //pdv/prix[last()]
+6. //pdv[@id=3150005]
+7. //pdv[not(contains (./services,"GPL"))]
+8. //*/following-sibling::*
+9. //pdv[starts-with(@id, '161700')]/ville/text()
+10. //ouverture[@saufjour='Lundi']/parent::*
+11. //services[contains(.,'Relais colis')]/parent::*
+12. //*[text()='Piste poids lourds']/preceding::*[10]
+13. //rupture[@nom='SP95'][starts-with(@début, '2013-02-04')]/parent::*/ville/text()
+14. //pdv[not(fermeture)]
+15. boolean(//ville[contains(.,'La Mure')]/parent::*/prix[@nom='E10'])
+16. count(//pdv)
+17. //pdv/(string-length(adresse))
+18. max(//pdv/(string-length(adresse)))
+19. //ouverture[@fin > '20:00']/parent::*
+20. distinct-values(//pdv/prix/@nom/translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'))
+21. //pdv/@latitude/replace(.,'\.','--')
+22. /prix/@maj/concat(tokenize(.,'\s+')[2],'T',tokenize(.,'\s+')[1])
+
+
+
+Exercice de Xpath2
+En repartant du fichier juicers.html
+1. //juicer[@type='centrifugal']/string()
+2. //juicer[@type='centrifugal'][last()]/string()
+3. //juicer[@type='centrifugal'][position()!=2]/string()
+4. //juicer/name/string()
+5. count(//juicer[contains(./name,'Juiceman Jr.')]/preceding-sibling::*)+1
+6. //juicer/concat('<',name/name(),'>',name/text(),'</',name/name(),'>')
+7. count(//*/name[contains(.,'Juiceman Jr.')]/parent::*/preceding-sibling::*)+1
+8. 5 to 25
+9. (5 to 25)[. mod 5 eq 0]
