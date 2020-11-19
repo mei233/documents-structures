@@ -327,3 +327,87 @@ On définit un test qui vérifie :
 - s'il y a exactement deux enfants
 - s'il y a des enfants
 - sinon, le reste
+
+## Les espaces de nom
+
+Une des erreurs courantes lorsque l'on travaille sur un document avec un espace de nom est justement de ne pas l'indiquer puis de se demander pourquoi rien ne passe.
+
+Soit le document suivant
+
+```
+<racine xmlns="uri:namespace">
+    <titre>Bonjour !</titre>
+</racine>
+```
+
+et la feuille
+
+```
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    exclude-result-prefixes="xs"
+    version="2.0">
+    
+    <xsl:template match="racine">
+        <html>
+            <xsl:apply-templates/>
+        </html>
+    </xsl:template>
+
+</xsl:stylesheet>
+```
+
+le résultat obtenue est
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+Bonjour !
+```
+
+L'élément `<html>` n'apparaît pas dans notre sortie. Oxygen nous signale un warning (fenêtre en bas à droite).
+> The source document is in namespace uri:namespace, but all the template rules match elements in no namespace (Use --suppressXsltNamespaceCheck:on to avoid this warning)
+
+Notre document XML est contenu dans un espace de nom mais aucun de nos templates ne le contient. Il faut donc le préciser.
+
+Modifions notre feuille XSL. Un espace de nom est ajouté à la racine `<xsl:stylesheet>` avec un préfixe `xmlns:my="uri:namespace"`. Cet espace de nom est le même que celui de notre document XML. L'ajout de cet espace de nom, nous permet de l'utiliser sur notre XPAth comme sur le premier `template`.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:my="uri:namespace"
+    exclude-result-prefixes="xs"
+    version="2.0">
+    
+    <xsl:template match="my:racine">
+        <html>
+            <xsl:apply-templates/>
+        </html>
+    </xsl:template>
+    
+    <xsl:template match="titre">
+        <h1>
+            <xsl:value-of select="."/>
+        </h1>
+    </xsl:template>
+    
+</xsl:stylesheet>
+```
+
+En sortie : 
+
+```
+<html xmlns:my="uri:namespace">
+   Bonjour !
+</html
+```
+
+Le premier template de sélection de la racine a bien fonctionné car on a précise l'espace de nom. Néanmoins, le second template n'a lui rien donné car aucun espace de nom n'était utilisé.
+
+Vous pouvez remarquer que XSLT ajoute l'espace de nom de notre document XML d'origine sur la sortie, il est possible de supprimer ce comportement avec l'attribut `exclude-result-prefixes="xs my"` sur la racine de la feuille XSL. Par défaut, Oxygen exclut le préfixe `xs`.
+
+Rien ne vous empêche de déclarer un nouvel espace de nom dans votre document en sortie.
+
+## Exercice
+
+Transformer le document XML `xml-xslt/xml-pour-tei.xl` pour obtenir le même résultat que le document XML `xml-xslt/tei-sortie.xml` à l'aide d'une feuille XSL.

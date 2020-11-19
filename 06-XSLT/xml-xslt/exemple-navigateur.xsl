@@ -4,7 +4,6 @@
 
     <xsl:template match="racine">
         <html>
-            <xsl:message>Message pour debug</xsl:message>
             <xsl:apply-templates/>
         </html>
     </xsl:template>
