@@ -13,6 +13,11 @@
             <xsl:value-of select="."/>
         </h1>
     </xsl:template>
+    
+    <xsl:template match="para">
+        <p><xsl:value-of select="."/></p>
+    </xsl:template>
+
 
 
 </xsl:stylesheet>
