@@ -4,7 +4,7 @@
 
 `XQuery` ou `XML Query Language` est défini par le [W3C](https://www.w3.org/XML/Query/). C'est un langage de requêtes pour exploiter, extraire de l'information des documents XMLs. On peut dire que c'est un peu le `SQL` du XML.
 
-C'est une extension de `XPath`, ainsi la syntaxe, les conceptions et les fonctions sont reprises.
+C'est une extension de `XPath`, ainsi la syntaxe, les concepts et les fonctions sont reprises.
 
 `XQuery` est lié à `XSLT`, on peut s'en servir pour transformer des documents également. Néanmoins, il ne s'agit **pas** d'une syntaxe XML.
 
@@ -219,12 +219,12 @@ return $ns
 
 ### Query dans un document
 
-Pour préciser dans quel document on souhaite effectuer la requête, on utilise l'instruction `doc(path)`.
+Pour préciser dans quel document on souhaite effectuer la requête, on utilise l'instruction `doc(file:///path)`.
 
 ``` xquery
 declare namespace t = "http://www.tei-c.org/ns/1.0";
  
-let $rom := doc('Rom.xml')
+let $rom := doc('file:///Rom.xml')
 
 for $editor in $rom//t:editor
 return $editor/text()
@@ -235,7 +235,7 @@ ou
 ``` xquery
 declare namespace t = "http://www.tei-c.org/ns/1.0";
 
-for $editor in doc('Rom.xml')//t:editor
+for $editor in doc('file:///Rom.xml')//t:editor
 return $editor/text()
 ```
 
@@ -315,7 +315,7 @@ let $auteurs :=
 </auteurs>
 
 for $auteur in $auteurs/auteur
-return <li>$auteur</li>
+return <li>{$auteur/text()}</li>
 }
 </ul>
 ```
@@ -324,12 +324,12 @@ Produis le fragment HTML suivant
 
 ``` xquery
 <ul>
-   <li>$auteur</li>
-   <li>$auteur</li>
-   <li>$auteur</li>
-   <li>$auteur</li>
-   <li>$auteur</li>
-</ul
+   <li>Arland</li>
+   <li>Yourcenar</li>
+   <li>Paulhan</li>
+   <li>Ponge</li>
+   <li>Réage</li>
+</ul>
 ```
 
 ### Enchâsser les `for`
